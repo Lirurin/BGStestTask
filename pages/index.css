@@ -1,0 +1,90 @@
+.account {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.account__card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.account__toolbar {
+  width: 100%;
+}
+
+.account__logout {
+  position: relative;
+  min-width: 25px;
+  height: 25px;
+  padding: 0;
+  margin-left: 15px;
+  cursor: pointer;
+}
+
+.account__logout::after, 
+.account__logout::before {
+  position: absolute;
+  content: '';
+}
+
+.account__logout::after {
+  right: 50%;
+  top: 50%;
+  width: 100%;
+  height: 100%;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  transform: translate(50%, -50%);
+}
+
+.account__logout::before {
+  z-index: 1;
+  right: 50%;
+  width: 8px;
+  height: 13px;
+  border-left: 3px solid #272727;
+  border-right: 3px solid #272727;
+  background-color: #fff;
+  transform: translateX(50%);
+}
+
+.account__card-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px;
+}
+
+.account__image {
+  width: auto;
+  height: 200px;
+  margin-right: 25px;
+}
+
+.account__text {
+  display: flex;
+  flex-direction: column;
+  min-width: 320px;
+  font-size: 22px;
+}
+
+@media screen and (max-width: 768px) {
+  .account__card-inner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .account__image {
+    max-width: 320px;
+    width: 100%;
+    height: auto;
+    margin: 0 auto 20px auto;
+  }
+  .account__text {
+    min-width: 100%;
+    font-size: 18px;
+  }
+}
